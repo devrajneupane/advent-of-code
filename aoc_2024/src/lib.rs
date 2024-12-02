@@ -1,4 +1,5 @@
 mod day01;
+mod day02;
 
 /// Run solution for specific problem based on `day` and `part`
 ///
@@ -12,6 +13,8 @@ pub fn get_solution(day: &str, part: &str) -> Result<String, String> {
     match (day, part) {
         ("01", "1") => Ok(day01::part_one(&input).to_string()),
         ("01", "2") => Ok(day01::part_two(&input).to_string()),
+        ("02", "1") => Ok(day02::part_one(&input).to_string()),
+        ("02", "2") => Ok(day02::part_two(&input).to_string()),
         _ => Err(format!("Invalid day or part: {} - {}", day, part)),
     }
 }
